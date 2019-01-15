@@ -16,7 +16,31 @@
     <main role="main" class="flex-shrink-0">
       <div class="container">
         <h1 class="mt-5">Objdiff 101</h1>
-        <p class="lead">The anatomy of an objdiff file.</p>
+        <p>The objdiff file is JSON file with information about variances in a SKUR diff.<br />
+        The downloaded file by default will be named <code>diff.objdiff.json</code>. <br />
+        Below is an example of a objdiff file with 1 variance.  
+        </p>
+        <code style="display: block;white-space:pre-wrap">
+        {
+          "version":"10.4.0.9",
+          "clusterDensityUnits":"points/cm^3",
+          "objectList":
+          [
+            {"id":"100", 
+             "dm":0.333.
+             "pointsInObj":900,
+             "seenPoints":288,
+             "closePoints":11,
+             "consideredCount":148,
+             "missing":0,"clusterDensity":0.9999,
+             "centroid":[3,5,6],"modelSister":[8,4,6], 
+             "scanBB":[[1,2,3,4,5,6]},
+          ]
+        }
+        </code>
+        <p> Let's step through some of the fields and explain what they mean.</p>
+        <code>"version":"10.4.0.9" </code>
+        <p> This is probably self-explanatory, but this field tells us the version of objdiff.  The SKUR engineering team frequently iterates over producing this file with more and more useful information.</p>
   </main>
 
 <footer class="container">
