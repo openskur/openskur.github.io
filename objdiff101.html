@@ -16,10 +16,10 @@
     <main role="main" class="flex-shrink-0">
       <div class="container">
         <h1 class="mt-5">Objdiff 101</h1>
-        <p>The objdiff file is JSON file with information about variances in a SKUR diff.<br />
-        The downloaded file by default will be named <code>diff.objdiff.json</code>. <br />
-        Below is an example of a objdiff file with 1 variance.  
-        </p>
+        <p>The objdiff file is JSON file with information about variances in a SKUR diff.
+        The downloaded file by default will be named <code>diff.objdiff.json</code>. 
+        The SKUR engineering team frequently iterates over the generation of this file with more and more useful information.  Your file may look a little different depending of the version of objdiff you have.</p>
+        Below is an example of a objdiff file with 1 variance.
         <code style="display: block;white-space:pre-wrap">
         {
           "version":"10.4.0.9",
@@ -27,20 +27,47 @@
           "objectList":
           [
             {"id":"100", 
-             "dm":0.333.
+             "dm":0.333,
              "pointsInObj":900,
              "seenPoints":288,
              "closePoints":11,
              "consideredCount":148,
-             "missing":0,"clusterDensity":0.9999,
-             "centroid":[3,5,6],"modelSister":[8,4,6], 
-             "scanBB":[[1,2,3,4,5,6]},
+             "missing":0,
+             "clusterDensity":0.9999,
+             "centroid":[3,5,6],
+             "modelSister":[8,4,6], 
+             "scanBB":[1,2,3,4,5,6]
+            },
           ]
         }
         </code>
         <p> Let's step through some of the fields and explain what they mean.</p>
         <code>"version":"10.4.0.9" </code>
-        <p> This is probably self-explanatory, but this field tells us the version of objdiff.  The SKUR engineering team frequently iterates over producing this file with more and more useful information.</p>
+        <p> This is probably self-explanatory, but this field tells us the version of objdiff.</p>
+        <code>"objectList":[]</code>
+        <p> The objectList is an array of variances. </p>
+        <p> Let's take a closer look at the fields of the individual variance. </p>
+        <code>"id":"100"</code>
+        <p> The id of the variance.</p>
+        <code>"dm":0.333</code>
+        <p>The max variance.</p>
+        <code>"pointsInObj":900</code>
+        <p> The number of points in the scanned object.  This is a derived number based on the model.</p>
+        <code>"seenPoints":288</code>
+        <p> The number of points actually seen by the scanner.</p> 
+        <code>"closePoints":11</code>
+        <p> The number of points that are potentially displaced and determined close by the SKUR intelligence engine.</p>
+        <code>"consideredCount":148</code>
+        <p>The number of points that were considered for displacement.</p>
+        <code>"missing":0</code>
+        <p>The number of missing points.</p>
+        <code>"centroid":[3,5,6]</code>
+        <p>The x,y,z location of the variance.</p>
+        <code>"modelSister":[8,4,6]</code>
+        <p>The x,y,z location of a point on the model from which a variance corresponds to.</p>
+        <code>"scanBB":[8,4,6,2,3,4]</code>
+        <p>An array of 6 points that define the bounding box of the scanned object.</p>
+
   </main>
 
 <footer class="container">
