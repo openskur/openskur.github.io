@@ -19,7 +19,7 @@
         <p>The objdiff file is JSON file with information about variances in a SKUR diff.
         The downloaded file by default will be named <code>diff.objdiff.json</code>. 
         The SKUR engineering team frequently iterates over the generation of this file with more and more useful information.  Your file may look a little different depending of the version of objdiff you have.</p>
-        Below is an example of a objdiff file with 1 variance.
+        Below is an example of an objdiff file with 1 variance.
         <code style="display: block;white-space:pre-wrap">
         {
           "version":"10.4.0.9",
@@ -66,7 +66,8 @@
         <code>"modelSister":[8,4,6]</code>
         <p>The x,y,z location of a point on the model from which a variance corresponds to.</p>
         <code>"scanBB":[8,4,6,2,3,4]</code>
-        <p>An array of 6 points that define the bounding box of the scanned object.</p>
+        <p>An array of 6 points that define the bounding box of the scanned object:
+        [xmin, ymin, zmin, xmax, ymax, zmax]</p>
 
   </main>
 
